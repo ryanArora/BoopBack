@@ -1,6 +1,7 @@
 package me.ryanarora.events;
 
 import me.ryanarora.BoopBack;
+import me.ryanarora.BoopBackConfig;
 import me.ryanarora.utils.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
@@ -11,6 +12,9 @@ public class ChatEvent {
 
     @SubscribeEvent
     public void chat(ClientChatReceivedEvent event){
+
+        if(BoopBackConfig.getEnabled().equals("false")) return;
+
         String text = event.message.getUnformattedText();
 
         if (text.startsWith("From ") && text.endsWith(": Boop!")) {
