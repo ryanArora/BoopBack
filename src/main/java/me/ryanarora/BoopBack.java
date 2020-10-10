@@ -1,6 +1,6 @@
 package me.ryanarora;
 
-import me.ryanarora.commands.BoopBackToggleCommand;
+import me.ryanarora.commands.BoopBackCommand;
 import me.ryanarora.events.ChatEvent;
 import me.ryanarora.utils.Utils;
 import net.minecraft.client.Minecraft;
@@ -38,6 +38,6 @@ public class BoopBack
     public void init(FMLInitializationEvent event)
     {
         MinecraftForge.EVENT_BUS.register(new ChatEvent());
-        ClientCommandHandler.instance.registerCommand(new BoopBackToggleCommand());
+        ClientCommandHandler.instance.registerCommand(new BoopBackCommand());
     }
 }
