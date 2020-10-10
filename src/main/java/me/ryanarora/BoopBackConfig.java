@@ -1,9 +1,7 @@
 package me.ryanarora;
 
-
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
-
 
 public class BoopBackConfig {
     private static Configuration config = BoopBack.getConfig();
@@ -15,8 +13,7 @@ public class BoopBackConfig {
     }
 
     public static void setEnabled(String key){
-
-        if(key.equals("true") || key.equals("false")){
+        if (key.equals("true") || key.equals("false")){
             try{
                 Property enabledProp = config.get(Configuration.CATEGORY_GENERAL, "Enabled", "true", "Is the mod enabled or disabled");
                 enabledProp.set(key);
@@ -25,8 +22,5 @@ public class BoopBackConfig {
                 e.printStackTrace();
             }
         }
-
     }
-
 }
-
