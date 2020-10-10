@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "boopback",
+    "name": "Boop Back",
+    "description": "Automatically boops people back on Hypixel",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [""],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
