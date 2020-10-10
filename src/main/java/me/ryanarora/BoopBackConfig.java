@@ -1,9 +1,7 @@
 package me.ryanarora;
 
-
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
-
 
 public class BoopBackConfig {
     private static Configuration config = BoopBack.getConfig();
