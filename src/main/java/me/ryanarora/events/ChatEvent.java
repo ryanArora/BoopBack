@@ -2,6 +2,7 @@ package me.ryanarora.events;
 
 import me.ryanarora.BoopBack;
 import me.ryanarora.BoopBackConfig;
+import me.ryanarora.threads.DelayMessage;
 import me.ryanarora.utils.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
@@ -22,6 +23,8 @@ public class ChatEvent {
             String username = reversed[1].replace(":", "");
 
             mc.thePlayer.sendChatMessage("/boop " + username);
+
+            DelayMessage delayMessage = new DelayMessage(Utils.random(500, 1500), "/boop " + username);
         }
     }
 }

@@ -13,7 +13,8 @@ public class BoopBackConfig {
     }
 
     public static void setEnabled(String key){
-        if (key.equals("true") || key.equals("false")){
+
+        if(key.equals("true") || key.equals("false")){
             try{
                 Property enabledProp = config.get(Configuration.CATEGORY_GENERAL, "Enabled", "true", "Is the mod enabled or disabled");
                 enabledProp.set(key);
@@ -22,5 +23,8 @@ public class BoopBackConfig {
                 e.printStackTrace();
             }
         }
+
     }
+
 }
+
