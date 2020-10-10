@@ -7,8 +7,8 @@ import me.ryanarora.utils.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-public class ChatEvent {
 
+public class ChatEvent {
     private final Minecraft mc = BoopBack.mc;
 
     @SubscribeEvent
