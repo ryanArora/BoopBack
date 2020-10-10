@@ -12,17 +12,14 @@ public class ChatEvent {
     private final Minecraft mc = BoopBack.mc;
 
     @SubscribeEvent
-    public void chat(ClientChatReceivedEvent event){
-
-        if(BoopBackConfig.getEnabled().equals("false")) return;
+    public void chat(ClientChatReceivedEvent event) {
+        if (BoopBackConfig.getEnabled().equals("false")) return;
 
         String text = event.message.getUnformattedText();
 
         if (text.startsWith("From ") && text.endsWith(": Boop!")) {
             String[] reversed = Utils.reverseStringArray(text.split(" "));
             String username = reversed[1].replace(":", "");
-
-            mc.thePlayer.sendChatMessage("/boop " + username);
 
             DelayMessage delayMessage = new DelayMessage(Utils.random(500, 1500), "/boop " + username);
         }

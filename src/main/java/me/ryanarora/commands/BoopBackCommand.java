@@ -8,9 +8,6 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BoopBackCommand extends CommandBase {
     @Override
     public String getCommandName() {
@@ -23,18 +20,18 @@ public class BoopBackCommand extends CommandBase {
     }
 
     @Override
+    public int getRequiredPermissionLevel() {
+        return 0;
+    }
+
+    @Override
     public void processCommand(ICommandSender iCommandSender, String[] strings) throws CommandException {
-        if(BoopBackConfig.getEnabled().equals("true")){
+        if (BoopBackConfig.getEnabled().equals("true")) {
             BoopBackConfig.setEnabled("false");
             BoopBack.mc.thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + "BoopBack toggled to : " + EnumChatFormatting.RED + "false"));
         } else {
             BoopBackConfig.setEnabled("true");
             BoopBack.mc.thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.RED + "BoopBack toggled to : " + EnumChatFormatting.GREEN + "true!"));
         }
-    }
-
-    @Override
-    public int getRequiredPermissionLevel() {
-        return 0;
     }
 }
