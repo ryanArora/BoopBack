@@ -11,10 +11,10 @@ import net.minecraft.util.EnumChatFormatting;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BoopBackToggleCommand extends CommandBase {
+public class BoopBackCommand extends CommandBase {
     @Override
     public String getCommandName() {
-        return "boopbacktoogle";
+        return "boopback";
     }
 
     @Override
@@ -36,13 +36,5 @@ public class BoopBackToggleCommand extends CommandBase {
     @Override
     public int getRequiredPermissionLevel() {
         return 0;
-    }
-
-    @Override
-    public List<String> getCommandAliases() {
-        //Im a professional programming so I use professional variable names
-        ArrayList<String> thing = new ArrayList<String>();
-        thing.add("bbt");
-        return thing;
     }
 }
